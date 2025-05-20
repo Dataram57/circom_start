@@ -1,0 +1,9 @@
+package.json
+package-lock.json
+node_modules/**
+**.r1cs
+**.sym
+**_js/**
+**.ptau
+**.zkey
+**_verifier.json
