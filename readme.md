@@ -36,3 +36,4 @@ snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
 ### Other
 
 - [Build Your First ZK App with Noir](https://youtu.be/06INZUM5Ca8)
+- [Lecture 10.5: Anonymous Payments](https://youtu.be/Z0s4W3UBxM8)
