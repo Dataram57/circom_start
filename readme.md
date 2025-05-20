@@ -28,3 +28,11 @@ snarkjs plonk setup circuit.r1cs ceremony_final.ptau circuit_prover.zkey
 snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
 ```
 
+# Resources:
+
+- [ZKP programming - Circom](https://www.youtube.com/watch?v=fHbJdNFOpzE&list=PLfDAFuuOdPbX3xRi2eiF9zsukcjrbNLRp&index=1)
+- [[Mirror] Quadratic Arithmetic Programs: from Zero to Hero](https://vitalik.eth.limo/general/2016/12/10/qap.html)
+
+### Other
+
+- [Build Your First ZK App with Noir](https://youtu.be/06INZUM5Ca8)
