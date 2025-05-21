@@ -12,7 +12,11 @@ cargo build --release
 
 # Quick Start:
 
+
 ```
+git clone https://github.com/Dataram57/circom_start.git my_new_app
+cd my_new_app
+
 npm init -y
 npm i snarkjs
 
