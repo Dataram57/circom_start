@@ -23,13 +23,36 @@ npm i snarkjs
 circom circuit.circom --r1cs
 circom circuit.circom --sym
 circom circuit.circom --wasm
+```
 
+### Quick code compilation
+```
+circom circuit.circom --r1cs --sym --wasm
+```
+
+### Ptau ceremony
+Already generated Ptau ceremonies: [https://github.com/iden3/snarkjs](https://github.com/iden3/snarkjs?tab=readme-ov-file#7-prepare-phase-2)
+
+```
 snarkjs powersoftau new bn128 12 ceremony_phase0.ptau -v 
 snarkjs powersoftau contribute ceremony_phase0.ptau ceremony_phase1.ptau --name="First contribution Name" -v -e="Random text 1"
 snarkjs powersoftau prepare phase2 ceremony_phase1.ptau ceremony_final.ptau -v
+```
 
+### Key generation + testing - Plonk
+```
 snarkjs plonk setup circuit.r1cs ceremony_final.ptau circuit_prover.zkey
 snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
+
+node app_plonk.js
+```
+
+### Key generation + testing - Groth16 (*faster*)
+```
+snarkjs groth16 setup circuit.r1cs ceremony_final.ptau circuit_prover.zkey
+snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
+
+node app_groth16.js
 ```
 
 # Resources:
