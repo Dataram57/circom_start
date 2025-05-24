@@ -39,7 +39,7 @@ snarkjs powersoftau contribute ceremony_phase0.ptau ceremony_phase1.ptau --name=
 snarkjs powersoftau prepare phase2 ceremony_phase1.ptau ceremony_final.ptau -v
 ```
 
-### Key generation + testing - Plonk
+### Proover, Verifier - Plonk
 ```
 snarkjs plonk setup circuit.r1cs ceremony_final.ptau circuit_prover.zkey
 snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
@@ -47,7 +47,7 @@ snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
 node app_plonk.js
 ```
 
-### Key generation + testing - Groth16 (*faster*)
+### Proover, Verifier - Groth16 (*faster*)
 ```
 snarkjs groth16 setup circuit.r1cs ceremony_final.ptau circuit_prover.zkey
 snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
