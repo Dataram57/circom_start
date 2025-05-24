@@ -55,6 +55,11 @@ snarkjs zkey export verificationkey circuit_prover.zkey circuit_verifier.json
 node app_groth16.js
 ```
 
+### Verifier in Solidity 
+```
+snarkjs zkey export solidityverifier circuit_prover.zkey circuit_verifier.sol
+```
+
 # Resources:
 
 - [ZKP programming - Circom](https://www.youtube.com/watch?v=fHbJdNFOpzE&list=PLfDAFuuOdPbX3xRi2eiF9zsukcjrbNLRp&index=1)
