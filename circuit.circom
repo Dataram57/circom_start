@@ -12,6 +12,11 @@ include "circomlib/circuits/bitify.circom";
 include "circomlib/circuits/comparators.circom";
 
 
+//================================================================
+//Cool circuits
+
+include "poseidon_merkle_root.circom";
+
 
 //================================================================
 //Operations
@@ -97,8 +102,6 @@ template Power(nBits){
     out <== acc[nBits-1];
  }
 
-
-
 //================================================================
 //Main
 
@@ -106,10 +109,10 @@ template MainCircuit() {
     //input
     signal input a;
     signal input b;
-    signal output out;
+    signal output out;    
 
     //Addition `a + b`;
-    //out <== a + b;
+    out <== a + b;
 
     //Subtraction `a - b`;
     //out <== a - b;
@@ -124,11 +127,11 @@ template MainCircuit() {
     //out <== div.out;
 
     //Modulo `a % b`
-    component mod = Modulo(252); // for 252-bit numbers
-    mod.in_a <== a;
-    mod.in_b <== b;
-    out <== mod.out_r;
-    signal output out2 <== mod.out_q;
+    //component mod = Modulo(252); // for 252-bit numbers
+    //mod.in_a <== a;
+    //mod.in_b <== b;
+    //out <== mod.out_r;
+    //signal output out2 <== mod.out_q;
 
     //Power `a ** b`
     //component pow = Power(256); //for 256 bit numbers
